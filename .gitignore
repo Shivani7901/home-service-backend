@@ -1,0 +1,9 @@
+# Ignore node_modules for all services
+**/node_modules
+
+# Ignore all .env files
+**/.env
+
+# Logs
+logs
+*.log
