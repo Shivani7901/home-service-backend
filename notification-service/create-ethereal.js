@@ -1,0 +1,8 @@
+// create-ethereal.js
+const nodemailer = require("nodemailer");
+
+(async () => {
+  let testAccount = await nodemailer.createTestAccount();
+  console.log("Ethereal test account created:");
+  console.log(testAccount);
+})();
