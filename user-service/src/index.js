@@ -11,7 +11,8 @@ app.use(cors());
 
 // Import routes
 const userRoutes = require("./routes/userRoutes");
-app.use("/api/users", userRoutes);
+// app.use("/api/users", userRoutes);
+app.use("/", userRoutes);
 
 // Connect DB & Start Server
 mongoose.connect(process.env.MONGO_URI)
