@@ -13,7 +13,8 @@ app.use(morgan("dev"));
 
 // Routes
 const notificationRoutes = require("./routes/notificationRoutes");
-app.use("/api/notifications", notificationRoutes);
+// app.use("/api/notifications", notificationRoutes);
+app.use("/", notificationRoutes);
 
 const PORT = process.env.PORT || 5005;
 app.listen(PORT, () => console.log(`Notification Service running on port ${PORT}`));

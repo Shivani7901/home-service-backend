@@ -12,7 +12,8 @@ app.use(cors());
 app.use(morgan("dev"));
 
 const paymentRoutes = require("./routes/paymentRoutes");
-app.use("/api/payments", paymentRoutes);
+// app.use("/api/payments", paymentRoutes);
+app.use("/", paymentRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)

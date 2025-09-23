@@ -12,7 +12,8 @@ app.use(cors());
 app.use(morgan("dev"));
 
 const serviceRoutes = require("./routes/serviceRoutes");
-app.use("/api/services", serviceRoutes);
+// app.use("/api/services", serviceRoutes);
+app.use("/", serviceRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("Service Catalog DB connected"))
