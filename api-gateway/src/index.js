@@ -38,9 +38,16 @@ app.use("/api/payments", createProxyMiddleware({
   pathRewrite: { "^/api/payments": "" }
 }));
 
-// ===== Notification Service =====
+// // ===== Notification Service =====
+// app.use("/api/notifications", createProxyMiddleware({
+//   target: process.env.NOTIFICATION_SERVICE_URL,
+//   changeOrigin: true,
+//   pathRewrite: { "^/api/notifications": "" }
+// }));
+
+// Proxy to Notification Service
 app.use("/api/notifications", createProxyMiddleware({
-  target: process.env.NOTIFICATION_SERVICE_URL,
+  target: process.env.NOTIFICATION_SERVICE_URL, // http://localhost:5005
   changeOrigin: true,
   pathRewrite: { "^/api/notifications": "" }
 }));
