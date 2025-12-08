@@ -57,6 +57,7 @@ app.get("/", (req, res) => {
   res.send("API Gateway is running 🚀");
 });
 
+const PORT = process.env.PORT || 5000; // fallback for local dev
 app.listen(process.env.PORT, () => {
   console.log(`API Gateway running on port ${process.env.PORT}`);
 });
