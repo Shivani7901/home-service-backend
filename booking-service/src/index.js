@@ -18,8 +18,8 @@ app.get("/", (req, res) => {
 
 // Import Routes
 const bookingRoutes = require("./routes/bookingRoutes");
-app.use("/api/bookings", bookingRoutes);
-// app.use("/", bookingRoutes);
+// app.use("/api/bookings", bookingRoutes);
+app.use("/", bookingRoutes);
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
