@@ -11,10 +11,15 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
+// Root Route for Render Health Check
+app.get("/", (req, res) => {
+  res.send("Booking Service is running");
+});
+
 // Import Routes
 const bookingRoutes = require("./routes/bookingRoutes");
-// app.use("/api/bookings", bookingRoutes);
-app.use("/", bookingRoutes);
+app.use("/api/bookings", bookingRoutes);
+// app.use("/", bookingRoutes);
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
