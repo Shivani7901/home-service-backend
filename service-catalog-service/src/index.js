@@ -11,6 +11,10 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
+app.get("/", (req, res) => {
+  res.send("Service Catalog Service is running 🏡");
+});
+
 const serviceRoutes = require("./routes/serviceRoutes");
 // app.use("/api/services", serviceRoutes);
 app.use("/", serviceRoutes);

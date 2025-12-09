@@ -11,6 +11,10 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
+app.get("/", (req, res) => {
+  res.send("Payment Service is running 💰");
+});
+
 const paymentRoutes = require("./routes/paymentRoutes");
 // app.use("/api/payments", paymentRoutes);
 app.use("/", paymentRoutes);
