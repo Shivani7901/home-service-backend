@@ -13,7 +13,7 @@ app.use(morgan("dev"));
 
 // Root Route for Render Health Check
 app.get("/", (req, res) => {
-  res.send("Booking Service is running");
+  res.send("Booking Service is running 😎");
 });
 
 // Import Routes

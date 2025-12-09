@@ -36,6 +36,10 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
+app.get("/", (req, res) => {
+  res.send("Notification Service is running ✨");
+});
+
 // Mount routes at root for proxy forwarding
 app.use("/", notificationRoutes);
 
